@@ -36,6 +36,8 @@
 					<th>Name</th>
 					<th>Gender</th>
 					<th>Cell Number</th>
+					<th>Case Number</th>
+					<th>Crime</th>
 					<td>Actions</td>
 				</tr>
 			</thead>
@@ -50,6 +52,12 @@
 						</td>
 						<td>
 							<?=htmlentities($inmate->cell_number)?>
+						</td>
+						<td>
+							<?=htmlentities($inmate->case_number)?>
+						</td>
+						<td>
+							<?=nl2br(htmlentities($inmate->crime))?>
 						</td>
 						<td>
 							<a onclick="return confirm('Are you sure?')" class="btn btn-warning btn-sm" href="delete_inmate.php?id=<?=urlencode($inmate->id)?>">

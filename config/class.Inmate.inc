@@ -6,6 +6,8 @@
 		public $last_name;
 		public $gender;
 		public $cell_number;
+		public $case_number;
+		public $crime;
 
 		const TABLE_NAME = 'inmates';
 
@@ -47,7 +49,9 @@
 				'first_name' => $this->first_name,
 				'last_name' => $this->last_name,
 				'gender' => $this->gender,
-				'cell_number' => $this->cell_number
+				'cell_number' => $this->cell_number,
+				'case_number' => $this->case_number,
+				'crime' => $this->crime
 			);
 			return $db->insert(self::TABLE_NAME, $params);
 		}
@@ -58,7 +62,9 @@
 				'first_name' => $this->first_name,
 				'last_name' => $this->last_name,
 				'gender' => $this->gender,
-				'cell_number' => $this->cell_number
+				'cell_number' => $this->cell_number,
+				'case_number' => $this->case_number,
+				'crime' => $this->crime
 			);
 			$ids = array('id' => $this->id);
 			return $db->update(self::TABLE_NAME, $params, $ids);
